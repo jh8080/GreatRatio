@@ -1,6 +1,7 @@
-
+# This R code reproduces Figures 1 and 4 of the paper
 rm(list = ls())
 library(urca)     # Install urca package
+library(OptSig)   # Install OptSig package
 n=100             # Sample size
 nit=10000         # Number of Monte Carlo Trials
 
@@ -74,7 +75,7 @@ plot(y,ylab="")
 summary(ur.df(y,type = "trend"))
 
 # Figure 4
-setwd("~/")    # Specify your working directory and place he data set in there
+setwd("~/")    # Specify your working directory and place the data set in there
 gratio=ts(read.csv(file="US.csv",header = TRUE),freq=4,start=c(1995,1))
 par(mfrow=c(2,1))
 x1=exp(gratio[,1])
@@ -98,7 +99,6 @@ summary(ADF)
 
 # The t-statistics and optimal level of significance
 t=(-0.062+0.05)/0.030
-library(OptSig)
 Opt.sig.norm.test(ncp=(-0.02+0.05)/0.030,n=103,alternative="greater")
 
 t=(-0.037661+0.05)/0.016

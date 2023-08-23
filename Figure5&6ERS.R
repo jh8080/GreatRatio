@@ -1,5 +1,6 @@
-
+# This R code reproduces Figures 5, 6, 7 of the paper (DF-GLS test)
 rm(list=ls(all=TRUE))
+# Install urca package and fUnitroots package
 library("fUnitRoots");library("urca")
 options(warn=-1)
 set.seed(5)

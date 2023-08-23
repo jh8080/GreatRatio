@@ -1,5 +1,7 @@
-
+# This R code reproduces Figures 5 and 6 of the paper (ADF test results)
 rm(list=ls(all=TRUE))
+
+# Install urca package and fUnitroots package
 library("fUnitRoots");library("urca")
 options(warn=-1)
 
